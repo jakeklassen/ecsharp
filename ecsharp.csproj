@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>ecsharp</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Jake Klassen</Authors>
+    <Company>N/A</Company>
+    <PackageTags>ecs; entity component system</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.11.5" />
+  </ItemGroup>
+
+</Project>

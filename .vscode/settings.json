@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 4,
+  "editor.defaultFormatter": "ms-vscode.csharp",
+  "csharp.format.enable": true,
+  "files.insertFinalNewline": true
+}
