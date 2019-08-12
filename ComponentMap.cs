@@ -14,9 +14,32 @@ namespace ecsharp
             return this;
         }
 
-        public T Get<T>(Type componentClass) where T : Component
+        public int Count
         {
-            return this.components[componentClass] as T;
+            get
+            {
+                return this.components.Count;
+            }
+        }
+
+        public T Get<T>(Type componentType) where T : Component
+        {
+            if (this.components.ContainsKey(componentType))
+            {
+                return this.components[componentType] as T;
+            }
+
+            return null;
+        }
+
+        public void Remove(Type componentType)
+        {
+            this.components.Remove(componentType);
+        }
+
+        public bool Has(Type componentType)
+        {
+            return this.components.ContainsKey(componentType);
         }
     }
 }
