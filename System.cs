@@ -1,7 +1,7 @@
 namespace ecsharp
 {
-    public class System
+    public abstract class System
     {
-
+        public abstract void Update(World world, float dt);
     }
 }

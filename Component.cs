@@ -5,7 +5,14 @@ namespace ecsharp
 {
     public abstract class Component : IEquatable<Component>
     {
-        private BitArray bitmask = new BitArray(0);
+        private ComponentBitmasGenerator bitmaskGenerator = new ComponentBitmasGenerator();
+        private BitArray bitmask;
+
+        public Component()
+        {
+            this.bitmaskGenerator = new ComponentBitmasGenerator();
+            this.bitmask = this.bitmaskGenerator.Next();
+        }
 
         public BitArray Bitmask { get => bitmask; }
 
